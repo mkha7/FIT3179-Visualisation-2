@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Property Market Visualizations</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .visualization {
+            margin-bottom: 40px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Malaysian Property Market Visualizations</h1>
+
+<div class="visualization" id="viz1"></div>
+<div class="visualization" id="viz2"></div>
+<div class="visualization" id="viz3"></div>
+<div class="visualization" id="viz4"></div>
+<div class="visualization" id="viz5"></div>
+
+<script type="text/javascript">
+    vegaEmbed('#viz1', 'visualization.vl (2).json').catch(console.error);
+    vegaEmbed('#viz2', 'visualization.vl (3).json').catch(console.error);
+    vegaEmbed('#viz3', 'visualization.vl (4).json').catch(console.error);
+    vegaEmbed('#viz4', 'visualization.vl (5).json').catch(console.error);
+    vegaEmbed('#viz5', 'visualization.vl (6).json').catch(console.error);
+</script>
+
+</body>
+</html>
