@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Rental Prices and Yields in Malaysian States (2023)",
+  "data": {
+    "values": [
+      {
+        "Year": 2023,
+        "Region": "Kuala Lumpur",
+        "MedianRentalPrice": 1800,
+        "RentalYield": 4.5
+      },
+      {
+        "Year": 2023,
+        "Region": "Johor",
+        "MedianRentalPrice": 1200,
+        "RentalYield": 4.1
+      },
+      {
+        "Year": 2023,
+        "Region": "Penang",
+        "MedianRentalPrice": 1500,
+        "RentalYield": 3.8
+      },
+      {
+        "Year": 2023,
+        "Region": "Selangor",
+        "MedianRentalPrice": 1600,
+        "RentalYield": 3.9
+      },
+      {
+        "Year": 2023,
+        "Region": "Kedah",
+        "MedianRentalPrice": 900,
+        "RentalYield": 4.2
+      },
+      {
+        "Year": 2023,
+        "Region": "Perak",
+        "MedianRentalPrice": 1000,
+        "RentalYield": 3.7
+      },
+      {
+        "Year": 2023,
+        "Region": "Sarawak",
+        "MedianRentalPrice": 1200,
+        "RentalYield": 3.9
+      },
+      {
+        "Year": 2023,
+        "Region": "Sabah",
+        "MedianRentalPrice": 1300,
+        "RentalYield": 4
+      },
+      {
+        "Year": 2023,
+        "Region": "Melaka",
+        "MedianRentalPrice": 1100,
+        "RentalYield": 4.3
+      },
+      {
+        "Year": 2023,
+        "Region": "Negeri Sembilan",
+        "MedianRentalPrice": 1150,
+        "RentalYield": 4.1
+      },
+      {
+        "Year": 2023,
+        "Region": "Pahang",
+        "MedianRentalPrice": 950,
+        "RentalYield": 4
+      },
+      {
+        "Year": 2023,
+        "Region": "Terengganu",
+        "MedianRentalPrice": 1000,
+        "RentalYield": 4.2
+      },
+      {
+        "Year": 2023,
+        "Region": "Perlis",
+        "MedianRentalPrice": 850,
+        "RentalYield": 4.3
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "color": "#1f77b4", "point": true},
+      "encoding": {
+        "x": {
+          "field": "Region",
+          "type": "nominal",
+          "axis": {"title": "Region"}
+        },
+        "y": {
+          "field": "MedianRentalPrice",
+          "type": "quantitative",
+          "axis": {
+            "title": "Median Rental Price (RM/month)",
+            "titleColor": "#1f77b4"
+          }
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "#ff7f0e", "point": true},
+      "encoding": {
+        "x": {
+          "field": "Region",
+          "type": "nominal",
+          "axis": {"title": "Region"}
+        },
+        "y": {
+          "field": "RentalYield",
+          "type": "quantitative",
+          "axis": {
+            "title": "Rental Yield (%)",
+            "titleColor": "#ff7f0e",
+            "orient": "right"
+          }
+        }
+      }
+    }
+  ],
+  "config": {}
+}
