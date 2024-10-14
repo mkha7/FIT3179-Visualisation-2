@@ -1,0 +1,146 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": "Housing Supply and Demand in Malaysian States (2023)",
+  "data": {
+    "values": [
+      {
+        "Year": 2023,
+        "Region": "Johor",
+        "NewPropertyLaunches": 12390,
+        "SalesPerformance": 42.9,
+        "VacancyRate": 10.5
+      },
+      {
+        "Year": 2023,
+        "Region": "Selangor",
+        "NewPropertyLaunches": 11542,
+        "SalesPerformance": 55,
+        "VacancyRate": 9.2
+      },
+      {
+        "Year": 2023,
+        "Region": "Kuala Lumpur",
+        "NewPropertyLaunches": 5927,
+        "SalesPerformance": 28.7,
+        "VacancyRate": 12.1
+      },
+      {
+        "Year": 2023,
+        "Region": "Penang",
+        "NewPropertyLaunches": 6400,
+        "SalesPerformance": 48.2,
+        "VacancyRate": 9.5
+      },
+      {
+        "Year": 2023,
+        "Region": "Kedah",
+        "NewPropertyLaunches": 3200,
+        "SalesPerformance": 40.1,
+        "VacancyRate": 8.7
+      },
+      {
+        "Year": 2023,
+        "Region": "Perak",
+        "NewPropertyLaunches": 4100,
+        "SalesPerformance": 37.5,
+        "VacancyRate": 7.8
+      },
+      {
+        "Year": 2023,
+        "Region": "Sarawak",
+        "NewPropertyLaunches": 7300,
+        "SalesPerformance": 45.8,
+        "VacancyRate": 9.9
+      },
+      {
+        "Year": 2023,
+        "Region": "Sabah",
+        "NewPropertyLaunches": 5100,
+        "SalesPerformance": 38.5,
+        "VacancyRate": 11.3
+      },
+      {
+        "Year": 2023,
+        "Region": "Melaka",
+        "NewPropertyLaunches": 2800,
+        "SalesPerformance": 41.2,
+        "VacancyRate": 10.9
+      },
+      {
+        "Year": 2023,
+        "Region": "Negeri Sembilan",
+        "NewPropertyLaunches": 2950,
+        "SalesPerformance": 43.7,
+        "VacancyRate": 10
+      },
+      {
+        "Year": 2023,
+        "Region": "Pahang",
+        "NewPropertyLaunches": 3450,
+        "SalesPerformance": 35.2,
+        "VacancyRate": 9.1
+      },
+      {
+        "Year": 2023,
+        "Region": "Terengganu",
+        "NewPropertyLaunches": 2700,
+        "SalesPerformance": 32.9,
+        "VacancyRate": 10.7
+      },
+      {
+        "Year": 2023,
+        "Region": "Perlis",
+        "NewPropertyLaunches": 1900,
+        "SalesPerformance": 29.5,
+        "VacancyRate": 11
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "SalesPerformance",
+      "type": "quantitative",
+      "title": "Sales Performance (%)",
+      "scale": {"zero": false}
+    },
+    "y": {
+      "field": "VacancyRate",
+      "type": "quantitative",
+      "title": "Vacancy Rate (%)",
+      "scale": {"zero": false}
+    },
+    "size": {
+      "field": "NewPropertyLaunches",
+      "type": "quantitative",
+      "title": "New Property Launches"
+    },
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "legend": {"title": "Region"},
+      "scale": {"scheme": "tableau10"}
+    },
+    "tooltip": [
+      {"field": "Region", "type": "nominal", "title": "Region"},
+      {
+        "field": "NewPropertyLaunches",
+        "type": "quantitative",
+        "title": "New Property Launches"
+      },
+      {
+        "field": "SalesPerformance",
+        "type": "quantitative",
+        "title": "Sales Performance (%)"
+      },
+      {
+        "field": "VacancyRate",
+        "type": "quantitative",
+        "title": "Vacancy Rate (%)"
+      }
+    ]
+  },
+  "mark": {"type": "circle", "tooltip": true},
+  "config": {}
+}

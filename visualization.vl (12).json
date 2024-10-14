@@ -1,0 +1,65 @@
+{
+  "width": 800,
+  "height": 400,
+  "title": "Affordability: Income-to-Price Ratios of Malaysian States (2023)",
+  "data": {
+    "values": [
+      {"Year": 2023, "Region": "Johor", "Price": 320000, "Affordability": 5.5},
+      {
+        "Year": 2023,
+        "Region": "Kuala Lumpur",
+        "Price": 550000,
+        "Affordability": 9
+      },
+      {
+        "Year": 2023,
+        "Region": "Selangor",
+        "Price": 480000,
+        "Affordability": 7.8
+      },
+      {"Year": 2023, "Region": "Penang", "Price": 420000, "Affordability": 6.2},
+      {"Year": 2023, "Region": "Kedah", "Price": 280000, "Affordability": 4.5},
+      {"Year": 2023, "Region": "Pahang", "Price": 290000, "Affordability": 4.9},
+      {"Year": 2023, "Region": "Perak", "Price": 310000, "Affordability": 5.2},
+      {"Year": 2023, "Region": "Sarawak", "Price": 400000, "Affordability": 6},
+      {"Year": 2023, "Region": "Sabah", "Price": 380000, "Affordability": 6.8},
+      {
+        "Year": 2023,
+        "Region": "Terengganu",
+        "Price": 300000,
+        "Affordability": 4.7
+      },
+      {"Year": 2023, "Region": "Melaka", "Price": 350000, "Affordability": 5.4},
+      {
+        "Year": 2023,
+        "Region": "Negeri Sembilan",
+        "Price": 330000,
+        "Affordability": 5.3
+      }
+    ]
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Affordability",
+      "type": "quantitative",
+      "title": "Income-to-Price Ratio"
+    },
+    "y": {
+      "field": "Price",
+      "type": "quantitative",
+      "title": "Median Property Price (RM)"
+    },
+    "tooltip": [
+      {"field": "Region", "type": "nominal"},
+      {"field": "Affordability", "type": "quantitative"},
+      {"field": "Price", "type": "quantitative"}
+    ],
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "scale": {"scheme": "category20"}
+    }
+  },
+  "config": {}
+}
