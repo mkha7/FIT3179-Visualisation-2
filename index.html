@@ -8,9 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <style>
+        /* Background gradient */
         body {
-            font-family: 'Sans-serif', Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,8 +20,8 @@
         h1 {
             text-align: center;
             color: #2C3E50;
-            margin: 50px 0 20px;
-            font-size: 2.5em;
+            font-size: 3em;
+            margin-top: 40px;
         }
 
         .centered {
@@ -28,43 +29,77 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .visualization {
             width: 90%;
             max-width: 1000px;
-            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .description {
             font-size: 18px;
             color: #555;
             text-align: center;
-            margin-bottom: 40px;
+            margin: 20px auto;
             padding: 0 10%;
+            line-height: 1.6;
         }
 
         footer {
             text-align: center;
+            padding: 20px 0;
+            background-color: #2C3E50;
+            color: white;
             margin-top: 50px;
-            font-size: 16px;
-            color: #777;
         }
 
         .highlight {
-            color: #2C3E50;
+            color: #2980b9;
             font-weight: bold;
         }
 
         .data-link {
-            color: #2980b9;
+            color: #ecf0f1;
             text-decoration: none;
-            font-weight: bold;
         }
 
         .data-link:hover {
             text-decoration: underline;
+        }
+
+        .divider {
+            width: 80%;
+            margin: 30px auto;
+            height: 2px;
+            background-color: #bdc3c7;
+        }
+
+        /* Hover effects for visualizations */
+        .visualization:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        /* Styling for buttons and dropdown */
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #bdc3c7;
+            background-color: #ecf0f1;
+            color: #333;
+        }
+
+        /* Add some hover styling */
+        select:hover {
+            border-color: #2980b9;
         }
     </style>
 </head>
@@ -80,6 +115,8 @@
         </div>
     </div>
 
+    <div class="divider"></div>
+
     <!-- House Price Index by State -->
     <div class="centered">
         <div id="vis2" class="visualization"></div>
@@ -87,6 +124,8 @@
             The <span class="highlight">House Price Index (HPI)</span> is an important indicator of the health of the housing market. This chart shows the HPI for different Malaysian states in 2023, with the highest HPI in <span class="highlight">Kuala Lumpur</span> and the lowest in <span class="highlight">Kelantan</span>. The color gradient represents the year-on-year percentage change, providing insights into which regions are experiencing growth or stagnation in housing prices.
         </div>
     </div>
+
+    <div class="divider"></div>
 
     <!-- Affordability: Income-to-Price Ratios -->
     <div class="centered">
@@ -96,6 +135,8 @@
         </div>
     </div>
 
+    <div class="divider"></div>
+
     <!-- Rental Prices and Yields in Malaysian States -->
     <div class="centered">
         <div id="vis4" class="visualization"></div>
@@ -103,6 +144,8 @@
             This bar graph compares the <span class="highlight">rental yields</span> and <span class="highlight">median rental prices</span> across different states in Malaysia. <span class="highlight">Kuala Lumpur</span> stands out with the highest rental prices, while <span class="highlight">Perlis</span> has the lowest. Rental yields, on the other hand, provide insights into how profitable renting out properties can be in each state, helping investors decide where to invest.
         </div>
     </div>
+
+    <div class="divider"></div>
 
     <!-- Housing Supply and Demand in Malaysian States -->
     <div class="centered">
