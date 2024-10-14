@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Property Market</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            font-family: 'Sans-serif', Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        .description {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .visualization {
+            margin-bottom: 40px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Malaysian Property Market</h1>
+
+    <!-- Property Transactions in Malaysia -->
+    <div id="vis1" class="visualization"></div>
+    <div class="description">
+        This visualization provides an overview of property transactions across Malaysia, allowing you to explore the differences between East and West Malaysia, and their transaction volumes and values.
+    </div>
+
+    <!-- House Price Index by State -->
+    <div id="vis2" class="visualization"></div>
+    <div class="description">
+        This chart presents the House Price Index (HPI) across different states in Malaysia for 2023, highlighting the highest and lowest indices in Kuala Lumpur and Kelantan, respectively.
+    </div>
+
+    <!-- Affordability: Income-to-Price Ratios -->
+    <div id="vis3" class="visualization"></div>
+    <div class="description">
+        This scatterplot shows the relationship between income-to-price ratios and median property prices across Malaysian states, offering insights into the affordability of properties in each region.
+    </div>
+
+    <!-- Rental Prices and Yields in Malaysian States -->
+    <div id="vis4" class="visualization"></div>
+    <div class="description">
+        The bar graph displays the median rental prices and yields for different Malaysian states, providing insights into which states offer the highest rental yields and prices in 2023.
+    </div>
+
+    <!-- Housing Supply and Demand in Malaysian States -->
+    <div id="vis5" class="visualization"></div>
+    <div class="description">
+        This scatterplot compares sales performance and vacancy rates across Malaysian states, also indicating the number of new property launches in each region.
+    </div>
+
+    <footer>
+        Visualization by Muhammad Mustafa Khan
+    </footer>
+
+    <script type="text/javascript">
+        // Embed visualization 1 (Property Transactions in Malaysia)
+        vegaEmbed('#vis1', 'visualization.vl (10).json').catch(console.error);
+        
+        // Embed visualization 2 (House Price Index by State)
+        vegaEmbed('#vis2', 'visualization.vl (11).json').catch(console.error);
+
+        // Embed visualization 3 (Affordability: Income-to-Price Ratios)
+        vegaEmbed('#vis3', 'visualization.vl (12).json').catch(console.error);
+
+        // Embed visualization 4 (Rental Prices and Yields in Malaysian States)
+        vegaEmbed('#vis4', 'visualization.vl (13).json').catch(console.error);
+
+        // Embed visualization 5 (Housing Supply and Demand in Malaysian States)
+        vegaEmbed('#vis5', 'visualization.vl (14).json').catch(console.error);
+    </script>
+
+</body>
+</html>
