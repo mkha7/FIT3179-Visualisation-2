@@ -12,31 +12,49 @@
             font-family: 'Sans-serif', Arial, sans-serif;
             background-color: #f4f4f9;
             color: #333;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
         }
+
         h1 {
             text-align: center;
             color: #2C3E50;
-            margin-bottom: 40px;
+            margin: 50px 0 20px;
+            font-size: 2.5em;
         }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
         .visualization {
+            width: 90%;
+            max-width: 1000px;
             margin: 0 auto;
-            width: 800px;
-            display: block;
-            text-align: center;
         }
+
         .description {
-            font-size: 16px;
+            font-size: 18px;
             color: #555;
             text-align: center;
-            margin-bottom: 30px;
-            padding: 0 20px;
+            margin-bottom: 40px;
+            padding: 0 10%;
         }
+
         footer {
             text-align: center;
             margin-top: 50px;
-            font-size: 14px;
+            font-size: 16px;
             color: #777;
+        }
+
+        .highlight {
+            color: #2C3E50;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -45,33 +63,43 @@
     <h1>Malaysian Property Market</h1>
 
     <!-- Property Transactions in Malaysia -->
-    <div id="vis1" class="visualization"></div>
-    <div class="description">
-        This visualization provides an overview of property transactions across Malaysia, focusing on the distinction between East Malaysia and West Malaysia. It shows the number of transactions and the value of these transactions in billions. Explore how the property market differs between regions, with West Malaysia generally experiencing more transactions compared to East Malaysia.
+    <div class="centered">
+        <div id="vis1" class="visualization"></div>
+        <div class="description">
+            This visualization provides an overview of property transactions across Malaysia, focusing on the distinction between <span class="highlight">East Malaysia</span> and <span class="highlight">West Malaysia</span>. It shows the number of transactions and the value of these transactions in billions. Explore how the property market differs between regions, with West Malaysia generally experiencing more transactions compared to East Malaysia.
+        </div>
     </div>
 
     <!-- House Price Index by State -->
-    <div id="vis2" class="visualization"></div>
-    <div class="description">
-        The House Price Index (HPI) is an important indicator of the health of the housing market. This chart shows the HPI for different Malaysian states in 2023, with the highest HPI in Kuala Lumpur and the lowest in Kelantan. The color gradient represents the year-on-year percentage change, providing insights into which regions are experiencing growth or stagnation in housing prices.
+    <div class="centered">
+        <div id="vis2" class="visualization"></div>
+        <div class="description">
+            The <span class="highlight">House Price Index (HPI)</span> is an important indicator of the health of the housing market. This chart shows the HPI for different Malaysian states in 2023, with the highest HPI in <span class="highlight">Kuala Lumpur</span> and the lowest in <span class="highlight">Kelantan</span>. The color gradient represents the year-on-year percentage change, providing insights into which regions are experiencing growth or stagnation in housing prices.
+        </div>
     </div>
 
     <!-- Affordability: Income-to-Price Ratios -->
-    <div id="vis3" class="visualization"></div>
-    <div class="description">
-        Affordability is a key concern for homebuyers, and this scatterplot visualizes the relationship between income-to-price ratios and median property prices across Malaysian states in 2023. The further right a state is, the less affordable its properties are. Kuala Lumpur, for instance, has one of the highest property prices, making it less affordable for the average citizen.
+    <div class="centered">
+        <div id="vis3" class="visualization"></div>
+        <div class="description">
+            Affordability is a key concern for homebuyers, and this scatterplot visualizes the relationship between <span class="highlight">income-to-price ratios</span> and <span class="highlight">median property prices</span> across Malaysian states in 2023. Kuala Lumpur has one of the highest property prices, making it less affordable for the average citizen, while other regions show varying degrees of affordability.
+        </div>
     </div>
 
     <!-- Rental Prices and Yields in Malaysian States -->
-    <div id="vis4" class="visualization"></div>
-    <div class="description">
-        This bar graph compares the rental yields and median rental prices across different states in Malaysia. Kuala Lumpur stands out with the highest rental prices, while Perlis has the lowest. Rental yields, on the other hand, provide insights into how profitable renting out properties can be in each state, helping investors decide where to invest.
+    <div class="centered">
+        <div id="vis4" class="visualization"></div>
+        <div class="description">
+            This bar graph compares the <span class="highlight">rental yields</span> and <span class="highlight">median rental prices</span> across different states in Malaysia. <span class="highlight">Kuala Lumpur</span> stands out with the highest rental prices, while <span class="highlight">Perlis</span> has the lowest. Rental yields, on the other hand, provide insights into how profitable renting out properties can be in each state, helping investors decide where to invest.
+        </div>
     </div>
 
     <!-- Housing Supply and Demand in Malaysian States -->
-    <div id="vis5" class="visualization"></div>
-    <div class="description">
-        This scatterplot compares housing supply and demand across Malaysian states in 2023. The x-axis represents sales performance (how well properties are selling), while the y-axis represents the vacancy rate. The size of the circles corresponds to the number of new property launches in each state. This visualization helps understand which states are experiencing higher housing supply and how this affects demand and vacancy rates.
+    <div class="centered">
+        <div id="vis5" class="visualization"></div>
+        <div class="description">
+            This scatterplot compares <span class="highlight">housing supply</span> and <span class="highlight">demand</span> across Malaysian states in 2023. The x-axis represents sales performance (how well properties are selling), while the y-axis represents the vacancy rate. The size of the circles corresponds to the number of new property launches in each state. This visualization helps understand which states are experiencing higher housing supply and how this affects demand and vacancy rates.
+        </div>
     </div>
 
     <footer>
